@@ -1,0 +1,27 @@
+{
+  "name": "cognito-util",
+  "version": "0.0.1",
+  "description": "Helpers that make working with AWS Cognito easier",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build",
+    "eslint": "eslint src/**/*.ts",
+    "eslint:fix": "eslint src/**/*.ts --fix"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "aws",
+    "cognito"
+  ],
+  "author": "shskwmt",
+  "license": "MIT",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.4.0",
+    "@typescript-eslint/parser": "^4.4.0",
+    "eslint": "^7.10.0",
+    "typescript": "^4.0.3"
+  }
+}
