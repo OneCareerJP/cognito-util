@@ -45,4 +45,15 @@ export class CognitoUtil {
     localStorage.setItem('idToken', idToken);
     localStorage.setItem('expiresAt', expiresAt.toString());
   }
+
+  public isAuthenticated(): boolean {
+    const expiresAt = window.localStorage.getItem('expiresAt');
+    return expiresAt != null && new Date().getTime() < Number(expiresAt);
+  }
+
+  public getIdToken(): string | null {
+    return this.isAuthenticated()
+      ? window.localStorage.getItem('idToken')
+      : null;
+  }
 }
